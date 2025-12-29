@@ -1,8 +1,10 @@
 import { WeatherGrid } from '@/components/WeatherGrid';
-import { mockEvents } from '@/lib/mockData';
+import { mockEvents, facilitatorSchedule, venueBlocks } from '@/lib/mockData';
+import { getSanitizedEvents } from '@/lib/utils';
 import { Star, Telescope } from 'lucide-react';
 
 export default function Home() {
+  const displayEvents = getSanitizedEvents(mockEvents, facilitatorSchedule, venueBlocks);
   return (
     <div className="min-h-screen bg-ivory">
       {/* Hero Section */}
@@ -61,7 +63,7 @@ export default function Home() {
         </div>
 
         {/* Events Grid */}
-        <WeatherGrid events={mockEvents} />
+        <WeatherGrid events={displayEvents} />
       </section>
 
       {/* Footer */}

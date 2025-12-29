@@ -1,5 +1,16 @@
 import { AstroEvent } from './index';
 
+// Simulate your personal calendar blocks (PTO, Rest, Travel)
+export const facilitatorSchedule = [
+  { start: '2025-01-10', end: '2025-01-12', title: 'Personal Time Off' },
+];
+
+// Simulate venue schedule by adding venue blocks 
+export const venueBlocks = [
+  { venueId: 'ooty', start: '2024-12-01', end: '2024-12-25', title: 'Third party booking' },
+  { venueId: 'coorg', start: '2025-01-10', end: '2025-01-25', title: 'Third party booking' },
+];
+
 // Mock venue data for display purposes
 export const venues = {
   'coorg': { name: 'Coorg Hills', location: 'Karnataka' },
@@ -33,7 +44,7 @@ export const mockEvents: AstroEvent[] = [
   },
   {
     id: 'kodaikanal-nov-2',
-    date: '2024-11-02T20:30:00Z',
+    date: '2025-01-11T20:30:00Z',
     venueId: 'kodaikanal',
     moonIllumination: 0.35, // Mixed Viewing - 20-50%
     suitability: 'Mixed Viewing',
