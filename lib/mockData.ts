@@ -2,13 +2,13 @@ import { AstroEvent } from './index';
 
 // Simulate your personal calendar blocks (PTO, Rest, Travel)
 export const facilitatorSchedule = [
-  { start: '2025-01-10', end: '2025-01-12', title: 'Personal Time Off' },
+  { start: '2025-01-10', end: '2025-01-12', reason: 'Personal Time Off' },
 ];
 
 // Simulate venue schedule by adding venue blocks 
 export const venueBlocks = [
-  { venueId: 'ooty', start: '2024-12-01', end: '2024-12-25', title: 'Third party booking' },
-  { venueId: 'coorg', start: '2025-01-10', end: '2025-01-25', title: 'Third party booking' },
+  { venueId: 'ooty', start: '2024-12-01', end: '2024-12-25', reason: 'Third party booking' },
+  { venueId: 'coorg', start: '2025-01-10', end: '2025-01-25', reason: 'Third party booking' },
 ];
 
 // Mock venue data for display purposes

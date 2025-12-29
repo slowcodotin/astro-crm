@@ -22,7 +22,7 @@ export function getSanitizedEvents(
       })
     );
     if (ptoCollision) {
-      logger.warn(`LOCK 1: [${event.id}] Blocked by PTO: ${ptoCollision.title}`);
+      logger.warn(`LOCK 1: [${event.id}] Blocked by PTO: ${ptoCollision.reason}`);
       return { ...event, status: 'Blocked' as const, isAvailable: false };
     }
 
@@ -35,7 +35,7 @@ export function getSanitizedEvents(
       })
     );
     if (venueCollision) {
-      logger.warn(`LOCK 2: [${event.id}] Blocked by Venue Conflict: ${venueCollision.title}`);
+      logger.warn(`LOCK 2: [${event.id}] Blocked by Venue Conflict: ${venueCollision.reason}`);
       return { ...event, status: 'Blocked' as const, isAvailable: false };
     }
 

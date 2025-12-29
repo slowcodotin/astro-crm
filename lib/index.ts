@@ -11,7 +11,7 @@ export interface VenueBlock {
   venueId: string;
   start: string; // ISO Date
   end: string;   // ISO Date
-  title: string;
+  reason: string;
 }
 
 export interface AstroEvent {
